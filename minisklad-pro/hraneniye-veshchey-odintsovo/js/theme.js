@@ -1,16 +1,4 @@
 // JavaScript Document
-
-
-[].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
-  img.setAttribute('src', img.getAttribute('data-src'));
-  img.onload = function() {
-    img.removeAttribute('data-src');
-  };
-});
-
-
-
-
 jQuery(document).ready(function(e) {
 	jQuery(".main_menu .mob_menu").click(function(){
 		if(jQuery(".main_menu").hasClass("open")){
@@ -101,37 +89,6 @@ jQuery(document).ready(function(e) {
 		jQuery(this).parents(".img_bl").find(".img_big li").eq(ind).addClass("vis");
 	});
 	
-	jQuery(".gallery_slider").slick({
-		arrows:true,
-		prevArrow:'<a class="slick-prev"><span></span></a>',
-		nextArrow:'<a class="slick-next"><span></span></a>',
-		dots:false,
-		speed:300,
-		rows:2,
-		slidesPerRow:1,
-		slidesToShow:4,
-		slidesToScroll:1,
-		responsive: [
-			{
-				breakpoint:992,
-			  	settings: {
-					slidesToShow: 3,
-			  	}
-			},
-			{
-				breakpoint:640,
-			  	settings: {
-					slidesToShow: 2,
-			  	}
-			},
-			{
-				breakpoint:480,
-			  	settings: {
-					slidesToShow: 1,
-			  	}
-			}
-		]
-	});
 	
 	jQuery("[data-fancybox]").fancybox({
 		buttons:[
@@ -139,75 +96,7 @@ jQuery(document).ready(function(e) {
 		],
 		loop:true
 	});
-	
-	if(jQuery("#site").width()>991){
-		jQuery(".pickup_parallax").parallax();
-		jQuery(".save_parallax").parallax();
-		jQuery(".cons_parallax").parallax();
-	}
-	
-	jQuery(".comment_slider").slick({
-		arrows:true,
-		prevArrow:'<a class="slick-prev"><span></span></a>',
-		nextArrow:'<a class="slick-next"><span></span></a>',
-		dots:false,
-		speed:300,
-		fade:true,
-	});
-	jQuery(".comment_slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  		jQuery(".comment_slider").find(".comment.open").each(function(index, element) {
-            jQuery(this).removeClass("open");
-			jQuery(this).find(".more_link").text("Читать отзыв");
-			jQuery(this).find(".hide_bl").slideUp(0);
-        });
-		var video = jQuery(".comment_slider").find(".slick-current .video_bl").html();
-		jQuery(".comment_slider").find(".slick-current .video_bl").html("");
-		jQuery(".comment_slider").find(".slick-current .video_bl").html(video);
-	});
-	jQuery(".comment_slider .comment_in .more_link").click(function(){
-		if(jQuery(this).parents(".comment").hasClass("open")){
-			jQuery(this).parents(".comment").removeClass("open");
-			jQuery(this).text("Читать отзыв");
-			jQuery(this).parent(".comment").find(".hide_bl").slideUp(200);
-		}else{
-			jQuery(this).parents(".comment").addClass("open");
-			jQuery(this).text("Скрыть отзыв");
-			jQuery(this).parent(".comment").find(".hide_bl").slideDown(200);
-		}
-		return false;	
-	});
-	
-	jQuery(".compare_slider").slick({
-		arrows:true,
-		prevArrow:'<a class="slick-prev"><span></span></a>',
-		nextArrow:'<a class="slick-next"><span></span></a>',
-		dots:false,
-		speed:300,
-		fade:true,
-	});
-	
-	jQuery(".faq_slider").slick({
-		arrows:false,
-		prevArrow:'<a class="slick-prev"><span></span></a>',
-		nextArrow:'<a class="slick-next"><span></span></a>',
-		dots:false,
-		speed:0,
-		loop:false
-	});
-	jQuery(".faq_slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  		jQuery(".faq_wrap .quest_list .act").removeClass("act");
-		jQuery(".faq_wrap .quest_list>li").eq(nextSlide).addClass("act");
-	});
-	jQuery(".faq_wrap .quest_list a").click(function(e) {
-        var ind = jQuery(this).parent().index();
-		jQuery(".faq_wrap .quest_list .act").removeClass("act");
-		jQuery(this).parent().addClass("act");
-		jQuery(".faq_slider").slick('slickGoTo',ind);
-		if(jQuery("#site").width()<991){
-			jQuery("body, html").animate({"scrollTop":jQuery(".answer_bl").offset().top-70},500);	
-		}
-		return false;
-    });
+
 	
 	jQuery(".scroll_to").click(function(e) {
         var obj = jQuery(this).attr("href");
@@ -247,65 +136,8 @@ jQuery(document).ready(function(e) {
 	jQuery("input[type='text'],input[type='email'],input[type='tel'],input[type='password'], textarea").focusout(function(e) {
        jQuery(this).removeClass("clean"); 
     });
-	jQuery("input[type='tel']").inputmask({
-		alias: "phonemy",
-    });
-        
-	jQuery("#popup_call_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#popup_prop_form").validate({
-		rules: {
-			name: "required",
-			tel: "required",
-			text: "required",
-		}
-	});
-	jQuery("#popup_order_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#top_order_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#cons_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#calc_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#smaller_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#quest_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery("#one_click_form").validate({
-		rules: {
-			tel: "required",
-		}
-	});
-	jQuery(".popup_view form").each(function(index, element) {
-        jQuery(this).validate({
-			rules: {
-				tel: "required",
-			}
-		});
-    });
-	
+
+	// part of code moved to «theme--form-validation.js»
 	
 	function form_send(form) {
 		if(form.find("[name='some']").val() == "" && form.find("[name='text1']").val() == "" && form.find("[name='text2']").val() == ""){
@@ -345,8 +177,4 @@ jQuery(document).ready(function(e) {
 		form_send(jQuery(this).parents("form"));
 		return false;
 	});
-	
-	jQuery("img.ll").lazyload();
-	
-	
 });

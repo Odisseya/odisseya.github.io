@@ -131,6 +131,83 @@ if (isset($_POST['type'])) {
 	$header = "Content-type: text/html; charset=\"utf-8\"\r\n";
 	$header .= "From: Лендинг Minisklad.Pro <landing@minisklad.pro>\r\n";
 	mail($emailTo, $subject, $message, $header);
+
+    // Roistat Begin
+    $rsTypeForm = null;
+    $rsNameForm = null;
+    $name       = null;
+    $phone      = null;
+    $comment    = null;
+
+    //
+    switch($_POST['type']) {
+        case 'call':
+            $rsTypeForm = 'Обратный звонок';
+            $rsNameForm = 'Закажите обратный звонок';
+            $name       = $_POST['name'];
+            $phone      = $_POST['tel'];
+            break;
+        case 'order':
+            $rsTypeForm = 'Арендовать в 1 клик';
+            $rsNameForm = 'Аренда контейнера под склад';
+            $name       = $_POST['name'];
+            $phone      = $_POST['tel'];
+            break;
+        case 'cons':
+            $rsTypeForm = 'Подобрать контейнер';
+            $rsNameForm = 'Не знаете, какой контейнер подойдет для ваших нужд?';
+            $name       = $_POST['name'];
+            $phone      = $_POST['tel'];
+            break;
+        case 'calc':
+            $rsTypeForm = 'Калькулятор';
+            $rsNameForm = 'Рассчитайте стоимость хранения*';
+            $name       = $_POST['name'];
+            $phone      = $_POST['tel'];
+            $comment    = <<<EOT
+Номер телефона: {$_POST['tel']}
+Cрок хранения: {$_POST['month']}
+Тип контейнера: {$_POST['cont_type']}
+Стоимость аренды: {$_POST['price']}
+Стоимость аренды при единовременной оплате: {$_POST['price_desc']}
+EOT;
+            break;
+        case 'smaller':
+            $rsTypeForm = 'Нашли дешевле';
+            $rsNameForm = 'Нашли дешевле?';
+            $phone      = $_POST['tel'];
+            $comment    = 'Aдрес:' . $_POST['adr'];
+            break;
+        case 'quest':
+            $rsTypeForm = 'Подобрать контейнер';
+            $rsNameForm = 'Не уверены, что вам подойдет склад­контейнер?';
+            $name       = $_POST['name'];
+            $phone      = $_POST['tel'];
+            break;
+    }
+
+    //
+    $roistatData = array(
+        'roistat' => isset($_COOKIE['roistat_visit']) ? $_COOKIE['roistat_visit'] : 'no_cookie',
+        'key'     => 'MTg5MjQyOjExNDU0NDpiMzkzZWEwMzY5YWY2YjljODNmM2NmZjIxODZkNjYzMg==',
+        'title'   => 'Заявка с "'.$rsTypeForm.'"',
+        'name'    => $name,
+        'phone'   => $phone,
+        'comment' => $comment,
+        'fields'  => array(
+            'STAGE_ID'          => 'NEW',              // Статус сделки
+            'UF_CRM_1554369662' => $rsTypeForm,     // Тип обращения
+            'UF_CRM_1554369674' => $rsNameForm,     // Название формы
+            'UF_CRM_1554369697' => '{landingPage}', // Страница с которой была оставлена заявка
+            'UF_CRM_1554369710' => '{referrer}',    // Страница с которой был переход
+            'UF_CRM_1554369726' => '{source}',      // Источник (Маркер)
+        ),
+    );
+
+    if(!is_null($rsTypeForm)) {
+        file_get_contents('https://cloud.roistat.com/api/proxy/1.0/leads/add?' . http_build_query($roistatData));
+    }
+    // Roistat End
 }
 
 ?>
