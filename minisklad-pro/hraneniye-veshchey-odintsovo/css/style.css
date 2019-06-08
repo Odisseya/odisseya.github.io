@@ -1307,5 +1307,18 @@ label.error{font-size:12px !important; line-height:20px !important; color:#f00 !
 /* LazyLoad */
 .no-js img[data-src],
 .no-js source[data-srcset] {
-  display: none;
+  display: none !important;
+}
+
+.no-js .gallery_slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.no-js #head {
+  position: relative;
+}
+
+.js .hidden-bg {
+  background-image: none !important;
 }
