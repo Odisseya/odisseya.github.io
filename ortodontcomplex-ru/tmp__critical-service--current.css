@@ -1,0 +1,1983 @@
+@charset "UTF-8";
+article,aside,header,img,nav,section{
+    display:block
+}
+.wp-caption,img{
+    max-width:100%
+}
+.main-header__favorite,.search-box form{
+    grid-template-columns:60px 1fr;
+    display:grid
+}
+.search-box__popular-queries ul li:last-child{
+    margin-bottom:0
+}
+.side-navigation ul ul ul ul{
+    padding-left:0
+}
+ol,ul{
+    list-style:none
+}
+.toTop,a{
+    text-decoration:none
+}
+
+body{
+    font-family:OpenSans,sans-serif;
+    font-size:1rem;
+    line-height:1.75;
+    font-weight:400;
+    color:#172a3f;
+    -webkit-font-smoothing:antialiased
+}
+a{
+    color:#179bff
+}
+a,article,aside,blockquote,div,form,h1,h2,h3,header,i,img,li,nav,ol,p,section,span,strong,ul{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font:inherit;
+    vertical-align:baseline;
+    font-style:inherit;
+    font-weight:inherit
+}
+strong{
+    font-weight:700
+}
+*,:after,:before,body,html{
+    margin:0;
+    padding:0
+}
+.alignleft{
+    display:inline;
+    margin-top:8px
+}
+html{
+    overflow-y:scroll;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%
+}
+input[type=text]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none
+}
+button,input[type=submit]{
+    border:none;
+    -webkit-appearance:none
+}
+img{
+    width:auto;
+    height:auto
+}
+button{
+    background:0 0;
+    border-radius:0;
+    text-shadow:none
+}
+input[type=submit]{
+    background:#179bff;
+    border-radius:3px;
+    color:#fff;
+    font-weight:400;
+    display:inline-block;
+    font-size:.875rem;
+    line-height:1;
+    font-family:FregatBold;
+    margin:0;
+    padding:12px 20px;
+    min-height:34px;
+    outline:0
+}
+input,input[type=text],textarea{
+    color:#383838;
+    background:#fff;
+    border:none;
+    border-radius:4px;
+    height:44px;
+    line-height:44px;
+    padding:0 15px;
+    outline:0
+}
+textarea{
+    min-height:80px;
+    width:100%
+}
+textarea::-moz-placeholder{
+    font-size:.8125rem
+}
+.alignleft{
+    float:left;
+    margin-right:42px
+}
+.aligncenter,.wp-caption img[class*=wp-image-]{
+    display:block;
+    margin-left:auto;
+    margin-right:auto
+}
+@media (max-width:767px){
+    .alignleft{
+        margin-bottom:28px
+    }
+}
+.aligncenter{
+    clear:both;
+    margin-bottom:32px
+}
+@media (max-width:767px){
+    .aligncenter{
+        margin-bottom:28px
+    }
+}
+.wp-caption{
+    margin-bottom:20px
+}
+.content{
+    max-width:860px
+}
+.wp-caption .wp-caption-text{
+    font-size:.75rem;
+    margin:10px 0
+}
+.block-bottom.-small-bottom,.main-header__call-down .bottom-area .row:first-child{
+    margin-bottom:20px
+}
+.wp-caption-text{
+    text-align:center
+}
+.font-fregat{
+    font-family:Fregat
+}
+.font-fregat.-bold{
+    font-family:FregatBold
+}
+.text-italic{
+    font-family:OpenSansItalic
+}
+.lh-small{
+    line-height:1.25
+}
+.container{
+    margin:0 auto
+}
+@media (min-width:1224px){
+    .container{
+        width:1230px
+    }
+    .sidebar{
+        display:block
+    }
+}
+@media (min-width:768px) and (max-width:1224px){
+    .container{
+        width:720px
+    }
+}
+@media (max-width:767px){
+    .container{
+        width:auto;
+        padding:0 15px
+    }
+    .content{
+        box-sizing:border-box;
+        padding:0 5px
+    }
+}
+.content{
+    width:100%;
+    position:relative
+}
+.sidebar{
+    width:315px;
+    position:absolute;
+    right:0;
+    top:32px;
+    z-index:9999
+}
+@media (max-width:1224px){
+    .sidebar{
+        display:none
+    }
+    .main-header__favorite{
+        grid-template-columns:32px 1fr
+    }
+}
+.block-bottom,.post-entry ol{
+    margin-bottom:80px
+}
+.block-top{
+    margin-top:80px
+}
+.block-top.-small-top{
+    margin-top:32px
+}
+@media (max-width:767px){
+    .block-top,.block-top.-small-top{
+        margin-top:20px
+    }
+}
+@media (max-width:767px){
+    .block-bottom{
+        margin-bottom:32px
+    }
+    .block-bottom.-small-bottom{
+        margin-bottom:18px
+    }
+}
+.main-header{
+    padding:20px 0;
+    background:#fffefe
+}
+.main-header .main-header__row{
+    display:grid;
+    grid-template-columns:202px 270px 1fr 225px;
+    grid-column-gap:70px;
+    align-items:center
+}
+@media (min-width:768px) and (max-width:1224px){
+    .main-header .main-header__row{
+        grid-template-columns:26px 105px 1fr 170px 26px;
+        grid-column-gap:30px
+    }
+}
+@media (max-width:767px){
+    .main-header{
+        position:-webkit-sticky;
+        position:sticky;
+        top:0;
+        z-index:9
+    }
+    .main-header .main-header__row{
+        grid-template-columns:40px 1fr 44px 44px;
+        grid-column-gap:20px;
+        height:32px
+    }
+    .main-header .main-header__logo img{
+        max-height:26px;
+        height:auto
+    }
+}
+.main-header .main-header__times{
+    display:none
+}
+@media (min-width:1224px){
+    .main-header .main-header__times{
+        display:block!important;
+        line-height:1
+    }
+    .main-header .main-header__times .phone{
+        font-size:1.5rem
+    }
+    .main-header .main-header__times .phone a{
+        color:#000
+    }
+    .main-header .main-header__times .phone .g{
+        color:#b5bbc2
+    }
+    .main-header .main-header__times .days{
+        margin-top:14px
+    }
+    .main-header .main-header__times .days .grey-text{
+        font-size:.875rem;
+        color:#546271
+    }
+}
+.main-header .main-header__call-btn{
+    height:44px;
+    border-radius:22px;
+    background-image:linear-gradient(to right,#bbe44e,#9de231);
+    padding:0 24px;
+    font-family:FregatBold;
+    font-size:1.125rem;
+    line-height:44px;
+    text-align:center;
+    color:#1763a0
+}
+@media (min-width:768px) and (max-width:1224px){
+    .main-header .main-header__call-btn{
+        height:34px;
+        font-size:.875rem;
+        line-height:34px;
+        padding:0 15px
+    }
+}
+.main-header__favorite{
+    align-items:center;
+    grid-column-gap:15px
+}
+.search-box,.search-box__popular-queries{
+    background:#fff;
+    position:absolute;
+    display:none
+}
+@media (max-width:767px){
+    .main-header .main-header__call-btn{
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/mobile-header-call-icon.svg) center/contain no-repeat
+    }
+    .main-header .main-header__call-btn{
+        width:32px;
+        height:32px;
+        padding:0;
+        position:relative;
+        top:4px
+    }
+    .main-header .main-header__call-btn span,.main-header__favorite.-h{
+        display:none
+    }
+    .main-header__favorite.-cm{
+        display:grid;
+        padding:0 15px 15px;
+        background:#fff
+    }
+    .search-box__popular-queries{
+        display:none!important
+    }
+}
+@media (min-width:768px){
+    .main-header__favorite.-cm{
+        display:none
+    }
+}
+.main-header__favorite .icon{
+    width:60px;
+    height:60px;
+    display:inline-block;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/header-malina-icon.svg) center/contain no-repeat
+}
+.main-header__favorite .text{
+    font-size:.875rem;
+    color:#e83c8c
+}
+.search-box{
+    width:calc(100% - 50px);
+    height:60px;
+    left:0;
+    top:0
+}
+.search-box form{
+    width:100%;
+    height:60px;
+    line-height:60px
+}
+.search-box input[type=text]{
+    width:calc(100% - 70px);
+    height:60px;
+    font-family:FregatBold;
+    font-size:1.125rem;
+    color:#172a3f
+}
+.search-box input[type=text]::-webkit-input-placeholder{
+    color:#b5bbc2
+}
+.search-box input[type=text]::-moz-placeholder{
+    color:#b5bbc2
+}
+.search-box input[type=text]:-moz-placeholder{
+    color:#b5bbc2
+}
+.search-box input[type=text]:-ms-input-placeholder{
+    color:#b5bbc2
+}
+.search-box button{
+    width:60px;
+    height:60px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/search-icon-blask.svg) center/20px no-repeat
+}
+.search-box__popular-queries{
+    width:calc(100% - 90px);
+    border-radius:4px;
+    box-shadow:0 0 10px 0 rgba(11,31,53,.16);
+    padding:20px;
+    left:60px;
+    top:60px;
+    z-index:9
+}
+.search-box__popular-queries ul li{
+    margin-bottom:12px
+}
+.search-box__popular-queries ul li.title{
+    font-size:.875rem;
+    color:#546271;
+    margin-bottom:15px
+}
+.search-box__popular-queries ul li a{
+    font-family:FregatBold;
+    font-size:18px;
+    line-height:1.22;
+    color:#172a3f
+}
+.main-menu{
+    display:none
+}
+@media (max-width:1224px){
+    .main-header__favorite .icon{
+        width:32px;
+        height:32px
+    }
+    .main-header__favorite .text{
+        font-size:.75rem
+    }
+    .search-box__popular-queries{
+        width:calc(100% - 85px);
+        box-shadow:none;
+        left:25px;
+        top:115px
+    }
+    .main-menu{
+        display:block;
+        background:rgba(23,42,63,.8);
+        width:100%;
+        height:calc(100% + 160px);
+        position:fixed;
+        left:-100%;
+        top:0;
+        z-index:999999
+    }
+    .main-menu .main-menu__row{
+        width:0;
+        height:100%;
+        overflow-x:hidden;
+        overflow-y:scroll;
+        box-sizing:border-box!important;
+        padding:24px 32px!important;
+        background:#fff;
+        margin-left:0;
+        position:fixed;
+        left:-100%;
+        top:0;
+        z-index:999
+    }
+}
+@media (max-width:1224px) and (max-width:767px){
+    .main-menu .main-menu__row{
+        width:100%!important
+    }
+}
+@media (max-width:1224px){
+    .main-menu .main-menu__row.container{
+        padding:0;
+        width:auto
+    }
+    .main-menu .main-menu__row .main-menu__home-icon{
+        margin-bottom:24px
+    }
+    .main-menu .main-menu__row .main-menu__home-icon i.home-icon{
+        width:20px;
+        height:20px;
+        display:inline-block;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/mobile-menu-home.svg) center/contain no-repeat
+    }
+    .main-menu .main-menu__row ul{
+        width:320px
+    }
+    .main-menu .main-menu__row ul li{
+        font-size:1rem;
+        line-height:1.3;
+        margin:24px 0;
+        text-transform:uppercase
+    }
+    .main-menu .main-menu__row ul li a{
+        color:#172a3f;
+        position:relative
+    }
+    .main-menu .main-menu__row ul li a:after{
+        content:"";
+        width:0;
+        height:3px;
+        background:0 0;
+        position:absolute;
+        display:block;
+        bottom:-4px;
+        left:50%
+    }
+    .main-menu .mobile-menu-grey{
+        padding-bottom:5px;
+        margin-bottom:24px;
+        border-bottom:1px solid rgba(23,42,63,.12)
+    }
+    .main-menu .mobile-menu-grey li{
+        font-family:OpenSans,sans-serif;
+        text-transform:none!important
+    }
+    .main-menu .mobile-menu-grey li a{
+        color:#546271!important
+    }
+}
+@media (max-width:1224px) and (max-width:767px){
+    .main-menu .main-menu__row ul{
+        width:100%!important
+    }
+}
+@media (min-width:1224px){
+    .main-menu{
+        display:block!important;
+        width:100%;
+        height:60px;
+        background:#fffefe
+    }
+    .main-menu .main-menu__row{
+        position:relative;
+        height:100%
+    }
+    .main-menu .main-menu__home-icon{
+        position:absolute;
+        left:0;
+        top:50%;
+        transform:translateY(-50%)
+    }
+    .main-menu .main-menu__home-icon i.home-icon{
+        width:20px;
+        height:20px;
+        display:inline-block;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/header-menu-home-icon.svg) center/contain no-repeat
+    }
+    .main-menu .main-menu__nav{
+        text-align:center
+    }
+    .main-menu .main-menu__nav li{
+        display:inline-table;
+        margin-right:60px;
+        line-height:60px;
+        position:relative
+    }
+    .main-menu .main-menu__nav li:last-child{
+        margin-right:0
+    }
+    .main-menu .main-menu__nav li:after{
+        content:"";
+        width:0;
+        height:3px;
+        background:0 0;
+        position:absolute;
+        display:block;
+        bottom:2px;
+        left:50%
+    }
+    .main-menu .main-menu__nav li a{
+        letter-spacing:1px;
+        color:#172a3f;
+        text-transform:uppercase;
+        display:block
+    }
+    .main-menu .main-menu__search-btn{
+        width:20px;
+        height:20px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/home-menu-search-icon.svg) center/contain no-repeat;
+        position:absolute;
+        right:0;
+        top:50%;
+        transform:translateY(-50%)
+    }
+}
+.mobile-menu-grey{
+    display:none
+}
+@media (max-width:1224px){
+    .mobile-menu-grey{
+        display:block
+    }
+}
+.posrelat{
+    position:relative
+}
+.main-header__call-down{
+    display:none;
+    width:calc(290px - 48px);
+    background:#fff;
+    border-radius:4px;
+    box-shadow:0 0 10px 0 rgba(11,31,53,.16);
+    padding:24px;
+    position:absolute;
+    top:65px;
+    right:0;
+    z-index:999999999
+}
+.side-menu{
+    box-shadow:0 24px 32px 0 rgba(0,0,0,.08)
+}
+.main-header__call-down .btn-click-modal{
+    width:24px;
+    height:24px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/grey-close.svg) center/12px no-repeat;
+    position:absolute;
+    right:10px;
+    top:10px
+}
+.main-header__call-down .show-zone{
+    display:none;
+    padding-top:30px
+}
+.main-header__call-down .show-zone .good-block{
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/green-check-empyt.svg) center top/80px no-repeat;
+    padding-top:100px;
+    font-size:1rem;
+    line-height:1.75;
+    text-align:center;
+    color:#172a3f;
+    margin-bottom:50px
+}
+.main-header__call-down .show-zone .good-block a{
+    color:#172a3f
+}
+.main-header__call-down .show-zone .good-block .btn{
+    color:#179bff;
+    border-bottom:1px dotted rgba(23,155,255,.4);
+    margin-left:10px
+}
+.main-header__call-down .show-zone .cancel-btn{
+    width:140px;
+    height:46px;
+    background-image:linear-gradient(to right,#bbe44e,#9de231);
+    border-radius:22px;
+    font-family:FregatBold;
+    font-size:1.125rem;
+    display:inherit;
+    text-align:center;
+    color:#1763a0;
+    margin:0 auto
+}
+.main-header__call-down:after{
+    content:'';
+    width:22px;
+    height:12px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/header-dowm-area.svg) center/contain no-repeat;
+    position:absolute;
+    right:20px;
+    top:-12px
+}
+@media (max-width:999px){
+    .main-header__call-down{
+        right:-60px
+    }
+    .main-header__call-down:after{
+        right:50%;
+        transform:translateX(50%)
+    }
+}
+@media (max-width:768px){
+    .main-header__call-down{
+        right:-50px
+    }
+    .main-header__call-down:after{
+        right:68px
+    }
+}
+.main-header__call-down .top-area{
+    text-align:center
+}
+.main-header__call-down .top-area a{
+    width:100%;
+    height:100%;
+    display:block
+}
+.main-header__call-down .top-area .viber-icon{
+    width:46px;
+    height:46px;
+    display:inline-block;
+    margin-right:16px
+}
+.main-header__call-down .top-area .viber-icon .icon{
+    width:46px;
+    height:46px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/m-viber-empty.svg) center/contain no-repeat;
+    display:block
+}
+.main-header__call-down .top-area .whatsapp-icon{
+    width:46px;
+    height:46px;
+    display:inline-block
+}
+.main-header__call-down .center-area .open-chat-btn,.main-header__call-down .center-area .open-tel-btn{
+    height:50px;
+    line-height:46px;
+    color:#179bff;
+    width:100%;
+    text-align:center;
+    font-size:1.125rem;
+    font-family:FregatBold
+}
+.main-header__call-down .top-area .whatsapp-icon .icon{
+    width:46px;
+    height:46px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/m-wtapp-empty-copy.svg) center/contain no-repeat;
+    display:block
+}
+.main-header__call-down .center-area{
+    padding:24px 0
+}
+.main-header__call-down .center-area .open-chat-btn{
+    border-radius:32px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/header-chat-icon-blue.svg) 40px/20px no-repeat;
+    border:2px solid #c8e7ff;
+    margin-bottom:12px;
+    -webkit-font-smoothing:antialiased;
+    display:block
+}
+.main-header__call-down .center-area .open-tel-btn{
+    border-radius:32px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/call.svg) 40px/20px no-repeat #e1f2ff;
+    border:2px solid #e1f2ff
+}
+.main-header__call-down .center-area .open-tel-btn a{
+    color:#179bff;
+    display:block
+}
+.main-header__call-down .bottom-area{
+    background:#f7f7f7;
+    padding:24px;
+    margin:0 -24px -24px;
+    border-radius:0 0 4px 4px
+}
+.main-header__call-down .bottom-area input[type=text]{
+    width:100%;
+    height:48px;
+    line-height:48px;
+    box-sizing:border-box;
+    border:1px solid transparent;
+    border-radius:4px;
+    font-size:1.125rem;
+    color:#27292d;
+    font-family:FregatBold
+}
+.main-header__call-down .bottom-area::-webkit-input-placeholder{
+    color:#27292d
+}
+.main-header__call-down .bottom-area::-moz-placeholder{
+    color:#27292d
+}
+.main-header__call-down .bottom-area:-ms-input-placeholder{
+    color:#27292d
+}
+.main-header__call-down .bottom-area:-moz-placeholder{
+    color:#27292d
+}
+.main-header__call-down .bottom-area input[type=submit]{
+    width:100%;
+    height:48px;
+    background:#179bff;
+    border-radius:32px;
+    font-family:FregatBold;
+    font-size:1.125rem;
+    line-height:48px;
+    text-align:center;
+    padding:0;
+    color:#fff
+}
+.mobile-menu-btn{
+    display:none
+}
+@media (max-width:1224px){
+    .mobile-menu-btn{
+        display:block!important;
+        width:40px;
+        height:26px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/mobile-menu-icon.svg) 6px 1px/15px no-repeat;
+        padding-top:15px;
+        font-family:Fregat;
+        font-size:.75rem;
+        color:#172a3f;
+        margin-left:-6px
+    }
+}
+.mobile-services-btn{
+    display:none
+}
+@media (max-width:1224px){
+    .mobile-services-btn{
+        display:block!important;
+        width:44px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/mobile-services-icon.svg) 23px top/16px no-repeat;
+        padding-top:15px;
+        font-family:Fregat;
+        font-size:.75rem;
+        color:#172a3f
+    }
+}
+.owl-carousel{
+    width:100%;
+    position:relative;
+    z-index:1
+}
+.error-form-message{
+    display:none
+}
+.cta-smile-form .desc-free .tooltip{
+    display:none;
+    max-width:360px;
+    padding:15px;
+    background:#fff;
+    border-radius:2px;
+    box-shadow:0 1px 8px 0 rgba(0,0,0,.16),0 0 1px 0 rgba(0,0,0,.16);
+    font-size:.875rem;
+    color:#000;
+    position:absolute;
+    right:67px;
+    top:45px
+}
+.cta-smile-form .desc-free .tooltip.-in-page{
+    right:-40px
+}
+@media (max-width:1224px){
+    .cta-smile-form .desc-free .tooltip,.cta-smile-form .desc-free .tooltip.-in-page{
+        right:35%;
+        top:130px
+    }
+}
+.cta-smile-form .desc-free .tooltip:before{
+    content:"";
+    width:0;
+    height:0;
+    border-left:9px solid transparent;
+    border-right:9px solid transparent;
+    border-top:9px solid #fff;
+    position:absolute;
+    left:50%;
+    bottom:-9px
+}
+.cta-smile-form .desc-free .tooltip a{
+    color:#179bff
+}
+@media (max-width:767px){
+    .cta-smile-form .desc-free .tooltip{
+        max-width:calc(100% - 60px);
+        right:15px;
+        top:235px
+    }
+    .cta-smile-form .desc-free .tooltip.-in-page{
+        max-width:calc(100% - 60px);
+        right:15px;
+        top:210px
+    }
+}
+.cta-smile-form .desc-big .read-more{
+    display:none
+}
+@media (max-width:767px) and (max-width:768px){
+    .cta-smile-form .desc-big .read-more.-mob-mb{
+        margin-bottom:32px
+    }
+}
+@media (max-width:767px){
+    .cta-smile-form .desc-big .read-more{
+        display:inline-block;
+        margin:0 auto
+    }
+    .cta-smile-form .desc-big .read-more span{
+        color:#179bff;
+        font-family:FregatBold;
+        font-size:1rem;
+        border-bottom:1px dotted rgba(23,155,255,.4)
+    }
+}
+.doctor-tips .doctor-tips__tabs .tabs__content{
+    display:none
+}
+.doctor-tips .doctor-tips__tabs .tabs__content .color-items .i{
+    font-family:Fregat;
+    padding:6px 20px;
+    border-radius:22px;
+    display:inline-table;
+    font-size:1.125rem;
+    margin:0 5px 12px 0
+}
+.doctor-tips .doctor-tips__tabs .tabs__content .color-items{
+    margin-bottom:30px
+}
+@media (max-width:767px){
+    .doctor-tips .doctor-tips__tabs .tabs__content .color-items .i{
+        font-size:1rem
+    }
+    .doctor-tips .doctor-tips__tabs .tabs__content .color-items{
+        margin-bottom:15px
+    }
+}
+.doctor-tips .doctor-tips__tabs .tabs__content .color-items.-green .i{
+    background-image:linear-gradient(-90deg,#3cb3b7 0,#41d7a0 100%);
+    color:#fff
+}
+.doctor-tips .doctor-tips__tabs .tabs__content .color-items .i{
+    font-family:Fregat;
+    padding:6px 20px;
+    border-radius:22px;
+    display:inline-table;
+    font-size:1.125rem;
+    margin:0 5px 12px 0
+}
+.h3,.h4,h1,h2,h3{
+    line-height:1.25;
+    font-family:FregatBold;
+    font-weight:400;
+    margin:0 0 20px;
+    color:#172a3f
+}
+.h4{
+    margin-bottom:15px
+}
+h1{
+    font-size:3.5rem
+}
+h2{
+    font-size:2rem
+}
+@media (max-width:767px){
+    .doctor-tips .doctor-tips__tabs .tabs__content .color-items .i{
+        font-size:1rem
+    }
+    h1{
+        font-size:2rem
+    }
+    h2{
+        font-size:1.5rem
+    }
+}
+.h3,h3{
+    font-size:1.5rem
+}
+.h4{
+    font-size:1.125rem
+}
+@media (max-width:767px){
+    .h3,h3{
+        font-size:1.125rem
+    }
+    .h4{
+        font-size:1.0625rem
+    }
+}
+.post-entry.-grey-text{
+    color:#546271
+}
+.post-entry.-pages ul{
+    margin-bottom:24px
+}
+.post-entry.longreed h2{
+    font-size:2rem
+}
+.post-entry.longreed h3{
+    font-size:1.5rem
+}
+@media (max-width:768px){
+    .post-entry.longreed h2{
+        font-size:1.5rem
+    }
+    .post-entry.longreed h3{
+        font-size:1.125rem
+    }
+}
+.post-entry ul li{
+    color:#546271;
+    padding-left:24px;
+    position:relative;
+    margin-bottom:20px
+}
+.post-entry ul li:before{
+    content:"";
+    width:8px;
+    height:8px;
+    background:#179bff;
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    top:11px
+}
+.post-entry ol{
+    counter-reset:licounter
+}
+.post-entry .num-list,.post-entry ol li{
+    position:relative;
+    list-style:none;
+    padding-left:78px;
+    padding-top:40px;
+    border-top:1px solid rgba(0,0,0,.12);
+    margin-bottom:40px
+}
+.post-entry .num-list .before,.post-entry .num-list:before,.post-entry ol li:before{
+    counter-increment:licounter;
+    content:counter(licounter);
+    font-family:FregatBold;
+    font-size:3.5rem;
+    line-height:1;
+    color:#179bff;
+    position:absolute;
+    left:0;
+    top:40px
+}
+@media (max-width:767px){
+    .post-entry .num-list,.post-entry ol li{
+        padding-left:0;
+        padding-top:65px
+    }
+    .post-entry .num-list .before,.post-entry .num-list:before,.post-entry ol li:before{
+        font-size:2rem;
+        left:50%;
+        top:20px;
+        transform:translateX(-50%)
+    }
+}
+.post-entry .num-list.-numb:before{
+    content:none
+}
+.post-entry p{
+    margin-bottom:30px
+}
+.post-entry p:last-child{
+    margin-bottom:0
+}
+.post-entry strong{
+    color:#172a3f
+}
+.post-entry a{
+    color:#179bff
+}
+.no-p-mb p{
+    margin-bottom:30px!important
+}
+.page-title-area .page-title-area__row{
+    position:relative
+}
+.page-title-area{
+    width:100%;
+    background:#f5f7fa;
+    padding:30px 0 60px
+}
+@media (max-width:767px){
+    .page-title-area{
+        padding:15px 0 32px
+    }
+    .page-title-area h1{
+        text-align:center
+    }
+}
+.breadcrumb li a{
+    color:#179bff
+}
+.breadcrumb{
+    font-size:.875rem;
+    margin-bottom:20px
+}
+@media (max-width:767px){
+    .breadcrumb{
+        display:none
+    }
+}
+.breadcrumb li{
+    display:inline-block
+}
+.breadcrumb li a:after{
+    display:inline-block;
+    content:"→";
+    color:#90999f;
+    font:400 12px Arial;
+    width:24px;
+    text-align:center
+}
+@media (min-width:1225px){
+    .mobile-side-menu{
+        display:none;
+        right:-100%
+    }
+}
+@media (max-width:1224px){
+    .mobile-side-menu{
+        display:block;
+        background:rgba(23,42,63,.8);
+        width:100%;
+        height:100%;
+        position:fixed;
+        right:-100%;
+        top:0;
+        z-index:9999999
+    }
+    .mobile-side-menu .close-services-menu{
+        width:16px;
+        height:16px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/close-menu-blue.svg) center/contain no-repeat;
+        position:absolute;
+        right:4px;
+        top:12px
+    }
+    .mobile-side-menu .side-menu{
+        width:100%;
+        height:100%;
+        overflow-x:hidden;
+        overflow-y:auto;
+        box-sizing:border-box!important;
+        padding:20px 20px 20px 32px!important;
+        background:#fff;
+        border-radius:0;
+        position:absolute;
+        top:0;
+        right:-100%;
+        z-index:9999
+    }
+}
+.side-menu{
+    display:block;
+    width:100%;
+    background:#fff;
+    border-radius:4px;
+    z-index:9999;
+    position:relative;
+    -webkit-transform:translate3d(0,0,0)
+}
+@media (max-width:767px){
+    .side-menu{
+        border-radius:6px
+    }
+}
+.side-menu .side-menu__tabs{
+    position:relative;
+    z-index:99
+}
+.side-menu .side-menu__tabs--header{
+    height:54px;
+    border-radius:0 4px 0 0;
+    display:grid;
+    grid-template-columns:repeat(2,1fr)
+}
+.side-menu .side-menu__tabs--header.-bottom-line{
+    border-bottom:1px solid #e3e5e8
+}
+@media (max-width:1224px){
+    .side-menu .side-menu__tabs--header{
+        height:36px;
+        background:0 0;
+        grid-template-columns:repeat(2,min-content);
+        grid-column-gap:20px
+    }
+}
+.side-menu .side-menu__tabs--header .side-menu__tabs--header__item{
+    text-transform:uppercase;
+    color:#172a3f;
+    font-size:1rem;
+    line-height:54px
+}
+.side-menu .side-menu__tabs--header .side-menu__tabs--header__item.-active{
+    background:#fff;
+    position:relative
+}
+.side-menu .side-menu__tabs--content{
+    display:none
+}
+@media (max-width:1224px){
+    .side-menu .side-menu__tabs--header .side-menu__tabs--header__item{
+        font-size:1.5rem;
+        line-height:36px;
+        text-transform:none
+    }
+    .side-menu .side-menu__tabs--header .side-menu__tabs--header__item.-active{
+        color:#179bff
+    }
+    .side-menu .side-menu__tabs--content{
+        margin:0 -20px
+    }
+}
+.side-menu .side-menu__tabs--content.-active{
+    display:block;
+    position:relative;
+    z-index:9
+}
+.mobile-side-menu-search-box{
+    width:100%;
+    box-sizing:border-box;
+    height:46px;
+    background:#f5f7fa;
+    border-radius:4px;
+    overflow:hidden;
+    position:relative;
+    margin:12px 0 5px
+}
+@media (max-width:767px){
+    .mobile-side-menu-search-box{
+        border-radius:6px
+    }
+}
+.mobile-side-menu-search-box input[type=text]{
+    width:100%;
+    height:46px;
+    box-sizing:border-box;
+    background:0 0;
+    border:none;
+    padding-right:50px;
+    font-family:FregatBold;
+    font-size:1.125rem;
+    line-height:46px
+}
+.mobile-side-menu-search-box input[type=text]::-webkit-input-placeholder{
+    color:#546271
+}
+.mobile-side-menu-search-box input[type=text]::-moz-placeholder{
+    color:#546271
+}
+.mobile-side-menu-search-box input[type=text]:-moz-placeholder{
+    color:#546271
+}
+.mobile-side-menu-search-box input[type=text]:-ms-input-placeholder{
+    color:#546271
+}
+.mobile-side-menu-search-box input[type=submit]{
+    width:24px;
+    height:24px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/search-icon-blask.svg) center/20px no-repeat;
+    position:absolute;
+    right:5px;
+    top:50%;
+    transform:translateY(-50%)
+}
+.side-navigation{
+    background:#fff;
+    padding:14px 0;
+    overflow:hidden;
+    z-index:9999
+}
+.side-navigation ul{
+    padding:14px 0 14px 20px
+}
+.side-navigation ul,.side-navigation ul li,.side-navigation ul li a{
+    position:relative;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.side-navigation ul ul{
+    display:none;
+    background:#fff;
+    box-shadow:0 8px 32px 0 rgba(0,0,0,.08);
+    border-radius:4px;
+    padding:12px 15px 14px 6px;
+    margin:8px -10px 12px 0
+}
+.side-navigation li:last-child,.side-navigation ul ul li:last-child{
+    margin-bottom:0
+}
+.side-navigation ul ul li{
+    padding-left:20px;
+    line-height:1.3;
+    margin-bottom:15px
+}
+.side-navigation ul ul li a{
+    margin-right:20px;
+    font-family:OpenSans,sans-serif;
+    font-size:.9375rem
+}
+.side-navigation ul ul li ul{
+    margin-left:-6px
+}
+.side-navigation li{
+    margin-bottom:12px
+}
+.side-navigation li.current-menu-item>a{
+    color:#179bff!important
+}
+.side-navigation ul ul ul ul li{
+    margin-left:10px
+}
+.side-navigation>ul>li>a{
+    padding:15px 20px;
+    font-family:Fregat;
+    font-size:1.125rem;
+    color:#172a3f
+}
+.side-navigation ul li a{
+    color:#172a3f
+}
+.side-navigation li.current-menu-ancestor>ul,.side-navigation li.current-menu-item>ul{
+    display:block
+}
+.long-read-top-links .blue-icon-benefits{
+    display:block
+}
+.content-quote{
+    font-family:FregatBold;
+    position:relative;
+    font-size:1.5rem;
+    line-height:1.5;
+    padding-left:28px;
+    margin-bottom:30px
+}
+.content-quote:before{
+    content:"";
+    width:6px;
+    height:calc(100% - 12px);
+    background:#b5bbc2;
+    border-radius:4px;
+    position:absolute;
+    left:0;
+    top:6px
+}
+.content-quote.-blue{
+    color:#179bff
+}
+.content-quote.-blue:before{
+    background:#179bff
+}
+@media (max-width:767px){
+    .side-navigation ul ul{
+        border-radius:6px
+    }
+    .content-quote{
+        font-size:1rem
+    }
+}
+.mobile-map{
+    height:100%;
+    display:none
+}
+.page-heading.-md{
+    margin:-20px 0 -48px
+}
+@media (max-width:767px){
+    .page-heading.-md{
+        margin:-6px 0 -24px
+    }
+    .page-heading.-md .block-bottom.-small-bottom{
+        margin-bottom:9px
+    }
+}
+.page-heading h1{
+    margin-bottom:10px
+}
+@media (max-width:767px){
+    .page-heading h1{
+        margin-bottom:-5px!important
+    }
+}
+@media (min-width:768px){
+    .long-read-top-links .blue-icon-benefits{
+        margin:0
+    }
+}
+@media (max-width:768px){
+    .mobile-map{
+        display:block
+    }
+    .long-read-top-links .container{
+        overflow:hidden;
+        position:relative
+    }
+    .long-read-top-links .container .next-arrow{
+        display:block;
+        width:40px;
+        height:40px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/blurred-bg-arrow.png) center/contain no-repeat;
+        position:absolute;
+        right:-15px;
+        z-index:2;
+        top:72px
+    }
+    .long-read-top-links .container .next-arrow:after{
+        content:'';
+        width:20px;
+        height:20px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/right-arrow.svg) center/12px no-repeat;
+        position:absolute;
+        right:10px;
+        top:8px
+    }
+    .long-read-top-links .next-arrow{
+        top:9px!important
+    }
+    .long-read-top-links .next-arrow:after{
+        top:8px
+    }
+    .long-read-top-links ul{
+        overflow-x:auto
+    }
+}
+input[placeholder]{
+    text-overflow:ellipsis
+}
+input::-moz-placeholder{
+    text-overflow:ellipsis
+}
+input:-moz-placeholder{
+    text-overflow:ellipsis
+}
+input:-ms-input-placeholder{
+    text-overflow:ellipsis
+}
+:focus::-webkit-input-placeholder{
+    color:transparent
+}
+:focus::-moz-placeholder{
+    color:transparent
+}
+:focus:-moz-placeholder{
+    color:transparent
+}
+:focus:-ms-input-placeholder{
+    color:transparent
+}
+@media (max-width:767px){
+    .page-categories{
+        margin:0 -20px -32px
+    }
+    .page-categories .page-categories__header{
+        width:100%;
+        border-top:1px solid rgba(0,0,0,.12);
+        margin-top:15px;
+        margin-bottom:-25px;
+        position:relative;
+        overflow:hidden;
+        display:inline-block
+    }
+    .page-categories .page-categories__header:first-child{
+        border-top:none
+    }
+    .page-categories .page-categories__header .part-name{
+        font-family:FregatBold;
+        font-size:1.5rem;
+        color:#179bff;
+        width:100%;
+        box-sizing:border-box;
+        padding:15px 32px 15px 18px;
+        background:#fff;
+        border-bottom:1px solid rgba(0,0,0,.12);
+        text-align:left;
+        position:relative
+    }
+    .page-categories .page-categories__header .part-name:last-child{
+        border-bottom:none
+    }
+    .page-categories .page-categories__header .part-name:after{
+        content:"";
+        width:16px;
+        height:16px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/faq-plus.svg) center/16px no-repeat;
+        position:absolute;
+        right:18px;
+        top:50%;
+        transform:translateY(-50%)
+    }
+    .page-categories .page-categories__content{
+        display:none
+    }
+    .page-categories .page-categories__content ul{
+        padding:20px 20px 1px
+    }
+    .page-categories .page-categories__content ul li{
+        line-height:1.3;
+        margin-bottom:12px
+    }
+    .page-categories .page-categories__content ul li .link{
+        display:block
+    }
+    .page-categories .page-categories__content ul li a{
+        font-family:FregatBold;
+        font-size:1.125rem
+    }
+    .page-categories .page-categories__content ul li .desc{
+        display:block;
+        color:#546271
+    }
+    .page-categories .page-categories__content ul li .children li a{
+        font-family:OpenSans,sans-serif;
+        font-size:1rem;
+        color:#546271
+    }
+}
+@media (min-width:768px){
+    .page-categories .page-categories__header .part-name{
+        font-family:FregatBold;
+        font-size:1.5rem;
+        color:#179bff;
+        border-bottom:1px dotted rgba(23,155,255,.5);
+        position:relative;
+        margin-right:52px
+    }
+    .page-categories .page-categories__header .part-name:last-child{
+        margin-right:0
+    }
+    .page-categories .page-categories__header .part-name:after{
+        content:"";
+        width:16px;
+        height:16px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/blue-arrow-down.svg) center/10px no-repeat;
+        position:absolute;
+        right:-20px;
+        top:50%;
+        transform:translateY(-50%)
+    }
+    .page-categories .page-categories__content{
+        display:none
+    }
+    .page-categories .page-categories__content ul.services-columns{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-gap:20px
+    }
+    .page-categories .page-categories__content ul.main-columns{
+        columns:3;
+        -moz-columns:3;
+        -webkit-columns:3
+    }
+    .page-categories .page-categories__content ul li{
+        line-height:1.3;
+        margin-bottom:24px
+    }
+    .page-categories .page-categories__content ul li .link{
+        display:block
+    }
+    .page-categories .page-categories__content ul li a{
+        font-family:FregatBold;
+        font-size:1.125rem
+    }
+    .page-categories .page-categories__content ul li .desc{
+        display:block;
+        color:#546271
+    }
+    .page-categories .page-categories__content ul li .children{
+        padding:12px 0
+    }
+    .page-categories .page-categories__content ul li .children li a{
+        font-family:OpenSans,sans-serif;
+        font-size:1rem;
+        color:#546271
+    }
+}
+@media (max-width:767px){
+    .long-read-top-links{
+        margin-bottom:-20px;
+        width:100%;
+        height:56px;
+        overflow:hidden;
+        background:#fff;
+        box-shadow:0 1px 1px 0 rgba(0,0,0,.03);
+        position:-webkit-sticky;
+        position:sticky;
+        top:50px;
+        z-index:2
+    }
+    .long-read-top-links ul{
+        overflow-x:auto;
+        margin-left:-20px;
+        padding-bottom:15px;
+        display:grid;
+        grid-gap:10px
+    }
+    .long-read-top-links li{
+        font-family:FregatBold;
+        line-height:56px;
+        text-align:center
+    }
+    .long-read-top-links li:before{
+        content:none!important
+    }
+    .long-read-top-links li a{
+        color:#172a3f
+    }
+    .long-read-top-links li:first-child{
+        display:block
+    }
+    .long-read-top-links li:first-child a{
+        color:#179bff;
+        border-bottom:1px dotted rgba(23,155,255,.4);
+        position:relative
+    }
+}
+@media (min-width:768px){
+    .long-read-top-links{
+        width:100%;
+        height:56px;
+        background:#fff;
+        box-shadow:0 1px 1px 0 rgba(0,0,0,.03);
+        position:-webkit-sticky;
+        position:sticky;
+        top:0;
+        z-index:2
+    }
+    .long-read-top-links ul{
+        height:56px;
+        overflow:hidden
+    }
+    .long-read-top-links li{
+        font-family:FregatBold;
+        font-size:1.125rem;
+        line-height:56px;
+        display:inline-table;
+        margin-right:26px;
+        padding-left:0!important;
+        margin-bottom:0
+    }
+    .long-read-top-links li:last-child{
+        margin-right:0
+    }
+    .long-read-top-links li:before{
+        content:none!important
+    }
+    .long-read-top-links li a{
+        color:#179bff
+    }
+}
+.read-tab-section .read-tab-section__content{
+    display:block
+}
+.read-tab-section .read-tab-section__heading{
+    background:#f5f7fa;
+    border-top:1px solid transparent;
+    padding-top:20px;
+    position:relative;
+    padding-bottom:20px;
+    margin-bottom:20px;
+    padding-right:40px
+}
+.before-after-slider .ba-slides{
+    padding-bottom:80px
+}
+.read-tab-section .read-tab-section__heading h2{
+    display:block;
+    margin-bottom:0
+}
+.read-tab-section .read-tab-section__heading:before{
+    content:'';
+    width:20px;
+    height:calc(100% + 1px);
+    background:#f5f7fa;
+    position:absolute;
+    left:-20px;
+    top:-1px
+}
+.read-tab-section .read-tab-section__heading .btn-click{
+    width:20px;
+    height:20px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/blue-minus.svg) center/contain no-repeat;
+    position:absolute;
+    right:20px;
+    top:28px
+}
+.read-tab-section h2{
+    display:inline;
+    color:#27292d;
+    font-size:1.5rem;
+    line-height:1.4
+}
+@media (max-width:768px){
+    .read-tab-section .read-tab-section__heading{
+        padding-right:50px;
+        margin-right:-20px
+    }
+}
+.read-tab-section.-toggle .read-tab-section__bottom,.read-tab-section.-toggle .read-tab-section__content{
+    display:none
+}
+.read-tab-section .read-tab-section__bottom{
+    display:block;
+    margin:25px 0 60px
+}
+.read-tab-section .read-tab-section__bottom button{
+    font-family:FregatBold;
+    font-size:1.125rem;
+    color:#179bff
+}
+.read-tab-section .read-tab-section__bottom .span{
+    display:inline-block;
+    border-bottom:1px dotted rgba(23,155,255,.5)
+}
+.before-after-slider{
+    margin:32px 0 60px;
+    position:relative
+}
+.before-after-slider .ba-slides .ba-slides__item .wrapp-col{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-column-gap:40px
+}
+.before-after-slider .ba-slides .ba-slides__item .wrapp-col img{
+    width:100%;
+    border-radius:8px
+}
+@media (max-width:767px){
+    .before-after-slider{
+        margin-bottom:32px
+    }
+    .before-after-slider .ba-slides .ba-slides__item .wrapp-col{
+        grid-template-columns:1fr;
+        text-align:center
+    }
+    .before-after-slider .ba-slides .ba-slides__item .wrapp-col .col:first-child{
+        margin-bottom:24px
+    }
+}
+.blue-icon-benefits{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    margin-bottom:80px;
+    position:relative
+}
+@media (max-width:767px){
+    .blue-icon-benefits{
+        grid-template-columns:1fr;
+        grid-row-gap:24px;
+        margin-bottom:42px
+    }
+}
+.post-plus-minus{
+    grid-template-columns:repeat(2,1fr)
+}
+.post-plus-minus{
+    grid-column-gap:28px;
+    margin-bottom:42px;
+    display:grid
+}
+.post-plus-minus .col{
+    background-image:linear-gradient(to right,#3cb3b7,#41d7a0);
+    border-radius:18px
+}
+.post-plus-minus .col:last-child{
+    background-image:linear-gradient(to left,#eeb43e,#e55977)
+}
+@media (max-width:767px){
+    .post-plus-minus{
+        grid-template-columns:1fr;
+        grid-row-gap:12px
+    }
+}
+.post-plus-minus ul{
+    margin-bottom:0!important
+}
+.modal-call p{
+    margin-bottom:25px;
+    color:#546271
+}
+.post-plus-minus .col{
+    padding:24px 24px 0
+}
+.post-plus-minus .col:last-child li:before{
+    content:"–";
+    width:16px;
+    height:2px;
+    color:#fff;
+    font-size:24px;
+    background:0 0;
+    position:absolute;
+    left:0;
+    top:-9px
+}
+.post-plus-minus .col .h4,.post-plus-minus .col li{
+    color:#fff
+}
+.post-plus-minus .col li:before{
+    content:"+";
+    width:16px;
+    height:16px;
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    background:0 0;
+    position:absolute;
+    left:0;
+    top:-5px
+}
+@media (max-width:1224px){
+    .modal-window.modal-window-faq .modal-call{
+        display:block
+    }
+}
+.modal-window{
+    display:none;
+    width:100%;
+    height:100%;
+    background:rgba(23,99,160,.9);
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:9
+}
+.modal-window.modal-window-faq{
+    padding-top:5%;
+    box-sizing:border-box;
+    text-align:center
+}
+.modal-window.modal-window-faq .modal-call form{
+    display:block
+}
+.modal-window.modal-window-faq .modal-call form textarea{
+    width:100%;
+    height:180px;
+    resize:none;
+    margin-bottom:12px;
+    box-sizing:border-box
+}
+.modal-window.modal-window-faq .modal-call form input[type=text]{
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:24px
+}
+.modal-call{
+    max-width:580px;
+    padding:42px 78px 50px;
+    box-sizing:border-box;
+    background:#f7f7f7;
+    border-radius:4px;
+    margin:32px auto;
+    position:relative
+}
+.modal-call .modal-close{
+    width:16px;
+    height:16px;
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/modal-close.svg) center/contain no-repeat;
+    position:absolute;
+    right:24px;
+    top:24px
+}
+.modal-call p{
+    font-family:OpenSansItalic
+}
+.modal-call form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:24px
+}
+@media (max-width:767px){
+    .modal-call{
+        border-radius:6px;
+        max-width:100%;
+        height:calc(100vh - 16px);
+        padding:32px 16px;
+        margin:8px;
+        text-align:center;
+        display:grid;
+        align-items:end
+    }
+    .modal-call form{
+        height:112px;
+        grid-template-columns:1fr
+    }
+}
+.modal-call form input[type=text],.modal-call form textarea{
+    font-family:FregatBold;
+    font-size:1.125rem;
+    color:#172a3f
+}
+.modal-call form input[type=text]::-webkit-input-placeholder,.modal-call form textarea::-webkit-input-placeholder{
+    color:#b5bbc2
+}
+.modal-call form input[type=text]::-moz-placeholder,.modal-call form textarea::-moz-placeholder{
+    color:#b5bbc2
+}
+.modal-call form input[type=text]:-moz-placeholder,.modal-call form textarea:-moz-placeholder{
+    color:#b5bbc2
+}
+.modal-call form input[type=text]:-ms-input-placeholder,.modal-call form textarea:-ms-input-placeholder{
+    color:#b5bbc2
+}
+.modal-call form input[type=submit]{
+    height:44px;
+    border-radius:22px;
+    background-image:linear-gradient(to right,#bbe44e,#9de231);
+    padding:0 24px;
+    font-family:FregatBold;
+    font-size:1.125rem;
+    line-height:44px;
+    text-align:center;
+    color:#1763a0
+}
+.toTop{
+    background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/blue-arrow-top.svg) center/10px no-repeat #fff;
+    box-shadow:0 4px 12px 0 rgba(0,0,0,.16);
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    text-align:center;
+    position:fixed;
+    bottom:120px;
+    right:20px;
+    z-index:6;
+    border:none!important;
+    outline:0!important;
+    display:none
+}
+.services-single-smile-form input[type=submit]{
+    border-radius:22px;
+    background:#179bff;
+    padding:0 24px;
+    line-height:44px;
+    text-align:center;
+    font-family:FregatBold
+}
+.services-single-smile-form{
+    margin:34px 0 24px
+}
+.services-single-smile-form .desc-phone{
+    margin-bottom:15px
+}
+.services-single-smile-form input[type=text]{
+    max-width:200px;
+    width:100%;
+    font-size:1.125rem;
+    margin-right:24px
+}
+.services-single-smile-form input[type=submit]{
+    height:44px;
+    font-size:1.125rem;
+    color:#fff
+}
+@media (max-width:768px){
+    .services-single-smile-form{
+        padding-top:20px
+    }
+    .services-single-smile-form .desc-phone{
+        text-align:center
+    }
+    .services-single-smile-form .desc-phone a{
+        display:inline-block
+    }
+    .services-single-smile-form input[type=text]{
+        margin:0 auto
+    }
+    .services-single-smile-form input[type=submit]{
+        margin:0 auto;
+        max-width:224px;
+        width:100%
+    }
+    .services-single-smile-form .smile-form-top{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-gap:20px
+    }
+}
+.icon-director,.main-footer .open-next-menu{
+    display:none
+}
+@media (max-width:767px){
+    .main-footer .open-next-menu{
+        display:inline-block;
+        margin:0 auto 20px;
+        width:100%
+    }
+    .main-footer .open-next-menu span{
+        font-family:FregatBold;
+        color:#179bff;
+        font-size:1rem;
+        position:relative;
+        border-bottom:1px dotted rgba(23,155,255,.4)
+    }
+    .main-footer .open-next-menu span:before{
+        content:"";
+        width:16px;
+        height:16px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/blue-arrow-down.svg) 93% center/10px no-repeat;
+        position:absolute;
+        right:-20px;
+        top:2px
+    }
+}
+@media (max-width:1200px){
+    .icon-director{
+        display:block;
+        width:100%;
+        padding-bottom:20px;
+        margin-bottom:20px;
+        border-bottom:1px solid #e3e5e7;
+        font-family:OpenSans,sans-serif;
+        font-size:.875rem;
+        line-height:24px;
+        padding-left:32px;
+        background:url(//odisseya.github.io/ortodontcomplex-ru/template/images/icon-director.svg) left 0/24px no-repeat
+    }
+    .icon-director a{
+        color:#000
+    }
+}
