@@ -34,9 +34,9 @@
   <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/template/images/mobile-services-icon.svg" as="image" media="(max-width: 1224px)">
   <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/template/images/mobile-header-call-icon.svg" as="image" media="(max-width: 767px)">
   <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/template/assets/js/dev/jquery.min.js" as="script">
-  <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/template/assets/js/dev/owl.js" as="script">
   <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/expansions/easy-lazy-loader/js/jquery.sonar.min.js" as="script">
   <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/expansions/easy-lazy-loader/js/easy-lazy-loader.min.js" as="script">
+  <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/template/assets/js/dev/owl.js" as="script">
   <link rel="preload" href="//odisseya.github.io/ortodontcomplex-ru/template/assets/js/scripts.min.js" as="script">
 
 
@@ -48,7 +48,7 @@
 </head>
 <body>
   
-  <noscript> <div><img src="https://mc.yandex.ru/watch/49586431" style="position:absolute; left:-9999px;" alt="" /></div> </noscript>
+  <!-- <noscript><div><img src="https://mc.yandex.ru/watch/49586431" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=121289064952311&ev=PageView&noscript=1" /></noscript>
   <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-77893-2bm8z" style="position:fixed; left:-999px;" alt="" /></noscript>
   <noscript> <div> <img src="//top-fwz1.mail.ru/counter?id=3042972;js=na" style="border:0;position:absolute;left:-9999px;" alt="" /> </div> </noscript>
@@ -1745,9 +1745,9 @@
   <!-- Scripts (deferred) -->
   <script defer="defer" src='//odisseya.github.io/ortodontcomplex-ru/template/assets/js/dev/jquery.min.js'></script>
   <script defer="defer" src='//odisseya.github.io/ortodontcomplex-ru/template/assets/js/dev/owl.js'></script>
+  <script defer="defer" src='//odisseya.github.io/ortodontcomplex-ru/template/assets/js/scripts.min.js'></script><!-- owl-settings -->
   <script defer="defer" src='//odisseya.github.io/ortodontcomplex-ru/expansions/easy-lazy-loader/js/jquery.sonar.min.js'></script>
   <script defer="defer" src='//odisseya.github.io/ortodontcomplex-ru/expansions/easy-lazy-loader/js/easy-lazy-loader.min.js'></script>
-  <script defer="defer" src='//odisseya.github.io/ortodontcomplex-ru/template/assets/js/scripts.min.js'></script><!-- owl-settings -->
   <!-- END: Scripts (deferred) -->
 
   
@@ -1832,17 +1832,17 @@
 
 
       // Metrika
-      (function(d, w, c) {
+     /* (function(d, w, c) {
         (w[c] = w[c] || []).push(function() { try { w.yaCounter49586431 = new Ya.Metrika2({ id: 49586431, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, triggerEvent: true }); } catch (e) {} }); var n = d.getElementsByTagName("script")[0],
           s = d.createElement("script"),
           f = function() { n.parentNode.insertBefore(s, n); };
         s.type = "text/javascript";
         s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");
+        s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");*/
       // END: Metrika
       
       // GoogleAnalytics
-      (function(i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r;
+      /*(function(i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
           (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date();
         a = s.createElement(o), m = s.getElementsByTagName(o)[0];
@@ -1850,7 +1850,7 @@
         a.src = g;
         m.parentNode.insertBefore(a, m) })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
       ga('create', 'UA-122227822-2', 'auto');
-      ga('send', 'pageview');
+      ga('send', 'pageview');*/
       // END: GoogleAnalytics
 
       // yandexChatWidget
@@ -1883,7 +1883,7 @@
       // END: Mail.ru
       
       // Legacy counters
-      (function(w, d, nv, ls, yac) { var lwait = function(w, on, trf, dly, ma, orf, osf) { var pfx = "ct_await_",
+      /*(function(w, d, nv, ls, yac) { var lwait = function(w, on, trf, dly, ma, orf, osf) { var pfx = "ct_await_",
             sfx = "_completed"; if (!w[pfx + on + sfx]) { var ci = clearInterval,
               si = setInterval,
               st = setTimeout,
@@ -1908,7 +1908,7 @@
           else w.ct_ga = w.GoogleAnalyticsObject; if (typeof Promise !== "undefined" && Promise.toString().indexOf("[native code]") !== -1) { new Promise(function(resolve) { var db, on = function() { resolve(true) },
                 off = function() { resolve(false) },
                 tryls = function tryls() { try { ls && ls.length ? off() : (ls.x = 1, ls.removeItem("x"), off()); } catch (e) { nv.cookieEnabled ? on() : off(); } };
-              w.webkitRequestFileSystem ? webkitRequestFileSystem(0, 0, off, on) : "MozAppearance" in d.documentElement.style ? (db = indexedDB.open("test"), db.onerror = on, db.onsuccess = off) : /constructor/i.test(w.HTMLElement) ? tryls() : !w.indexedDB && (w.PointerEvent || w.MSPointerEvent) ? on() : off(); }).then(function(pm) { if (pm) { gaid(w, d, w.ct_ga, ct, 2); } else { gaid(w, d, w.ct_ga, ct, 3); } }) } else { gaid(w, d, w.ct_ga, ct, 4); } } else { ct(w, d, 'script', cid, 1); } })(window, document, navigator, localStorage, "49586431");
+              w.webkitRequestFileSystem ? webkitRequestFileSystem(0, 0, off, on) : "MozAppearance" in d.documentElement.style ? (db = indexedDB.open("test"), db.onerror = on, db.onsuccess = off) : /constructor/i.test(w.HTMLElement) ? tryls() : !w.indexedDB && (w.PointerEvent || w.MSPointerEvent) ? on() : off(); }).then(function(pm) { if (pm) { gaid(w, d, w.ct_ga, ct, 2); } else { gaid(w, d, w.ct_ga, ct, 3); } }) } else { gaid(w, d, w.ct_ga, ct, 4); } } else { ct(w, d, 'script', cid, 1); } })(window, document, navigator, localStorage, "49586431");*/
       // END: Legacy counters
     }
 
