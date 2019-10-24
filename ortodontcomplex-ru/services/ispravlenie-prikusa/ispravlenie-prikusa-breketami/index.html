@@ -1738,6 +1738,10 @@
   <script type='text/javascript'>
     /* <![CDATA[ */
     var easylazyloader = { "threshold": "100" }; /* ]]> */
+    // Disable lazy-loading of invisible images in tabs
+    document.querySelectorAll(".-toggle").forEach(function(el) {
+      el.classList.remove("-toggle");
+    });
   </script>
   <!-- END: Scripts presets -->
 
